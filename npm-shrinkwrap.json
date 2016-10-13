@@ -1,0 +1,24 @@
+{
+  "name": "petrifi",
+  "version": "0.0.0",
+  "dependencies": {
+    "zelf": {
+      "version": "0.0.4",
+      "from": "zelf@latest",
+      "resolved": "https://registry.npmjs.org/zelf/-/zelf-0.0.4.tgz",
+      "dependencies": {
+        "asea": {
+          "version": "0.1.2",
+          "from": "asea@>=0.1.2 <0.2.0",
+          "resolved": "https://registry.npmjs.org/asea/-/asea-0.1.2.tgz",
+          "dependencies": {
+            "harden": {
+              "version": "0.3.5",
+              "from": "harden@>=0.3.5 <0.4.0"
+            }
+          }
+        }
+      }
+    }
+  }
+}

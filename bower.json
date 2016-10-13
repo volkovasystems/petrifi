@@ -1,0 +1,27 @@
+{
+  "name": "petrifi",
+  "version": "0.0.0",
+  "description": "Harden visible property.",
+  "main": "petrifi.js",
+  "authors": [
+    "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "harden",
+    "visible",
+    "property",
+    "petrifi"
+  ],
+  "homepage": "https://github.com/volkovasystems/petrifi",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "zelf": "^0.0.4"
+  }
+}
