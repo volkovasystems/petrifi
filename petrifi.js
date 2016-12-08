@@ -32,6 +32,9 @@
 			"file": "petrifi.js",
 			"module": "petrifi",
 			"author": "Richeve S. Bebedor",
+			"contributors": [
+				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
+			],
 			"email": "richeve.bebedor@gmail.com",
 			"repository": "https://github.com/volkovasystems/petrifi.git",
 			"test": "petrifi-test.js",
@@ -58,17 +61,10 @@
 	@end-include
 */
 
-if( typeof window == "undefined" ){
-	var zelf = require( "zelf" );
-}
+const protype = require( "protype" );
+const zelf = require( "zelf" );
 
-if( typeof window != "undefined" &&
-	!( "zelf" in window ) )
-{
-	throw new Error( "zelf is not defined" );
-}
-
-var petrifi = function petrifi( property, value, entity ){
+const petrifi = function petrifi( property, value, entity ){
 	/*;
 		@meta-configuration:
 			{
@@ -79,15 +75,15 @@ var petrifi = function petrifi( property, value, entity ){
 		@end-meta-configuration
 	*/
 
-	if( !property || typeof property != "string" ){
+	if( !property || !protype( property, STRING ) ){
 		throw new Error( "invalid property" );
 	}
 
-	var self = zelf( this );
+	let self = zelf( this );
 
 	entity = entity || self;
 
-	if( typeof entity[ property ] != "undefined" ){
+	if( !protype( entity[ property ], UNDEFINED ) ){
 		return entity;
 	}
 
@@ -101,6 +97,4 @@ var petrifi = function petrifi( property, value, entity ){
 	return entity;
 };
 
-if( typeof module != "undefined" ){
-	module.exports = petrifi;
-}
+module.exports = petrifi;

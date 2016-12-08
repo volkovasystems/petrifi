@@ -1,6 +1,6 @@
 {
   "name": "petrifi",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Harden visible property.",
   "main": "petrifi.js",
   "scripts": {
@@ -17,12 +17,16 @@
     "petrifi"
   ],
   "author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+  "contributors": [
+      "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/volkovasystems/petrifi/issues"
   },
   "homepage": "https://github.com/volkovasystems/petrifi#readme",
   "dependencies": {
-    "zelf": "0.0.4"
+    "protype": "^0.4.0",
+    "zelf": "^0.3.0"
   }
 }

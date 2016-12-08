@@ -1,20 +1,45 @@
 {
   "name": "petrifi",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "dependencies": {
-    "zelf": {
-      "version": "0.0.4",
-      "from": "zelf@latest",
-      "resolved": "https://registry.npmjs.org/zelf/-/zelf-0.0.4.tgz",
+    "protype": {
+      "version": "0.4.0",
+      "from": "protype@latest",
+      "resolved": "https://registry.npmjs.org/protype/-/protype-0.4.0.tgz",
       "dependencies": {
-        "asea": {
-          "version": "0.1.2",
-          "from": "asea@>=0.1.2 <0.2.0",
-          "resolved": "https://registry.npmjs.org/asea/-/asea-0.1.2.tgz",
+        "cemento": {
+          "version": "0.3.0",
+          "from": "cemento@latest",
+          "resolved": "https://registry.npmjs.org/cemento/-/cemento-0.3.0.tgz",
           "dependencies": {
             "harden": {
-              "version": "0.3.5",
-              "from": "harden@>=0.3.5 <0.4.0"
+              "version": "0.7.0",
+              "from": "harden@latest",
+              "resolved": "https://registry.npmjs.org/harden/-/harden-0.7.0.tgz"
+            }
+          }
+        },
+        "harden": {
+          "version": "0.7.0",
+          "from": "harden@latest",
+          "resolved": "https://registry.npmjs.org/harden/-/harden-0.7.0.tgz"
+        }
+      }
+    },
+    "zelf": {
+      "version": "0.3.0",
+      "from": "zelf@latest",
+      "resolved": "https://registry.npmjs.org/zelf/-/zelf-0.3.0.tgz",
+      "dependencies": {
+        "asea": {
+          "version": "0.4.0",
+          "from": "asea@latest",
+          "resolved": "https://registry.npmjs.org/asea/-/asea-0.4.0.tgz",
+          "dependencies": {
+            "harden": {
+              "version": "0.7.0",
+              "from": "harden@latest",
+              "resolved": "https://registry.npmjs.org/harden/-/harden-0.7.0.tgz"
             }
           }
         }
