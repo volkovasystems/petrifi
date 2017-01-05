@@ -1,10 +1,13 @@
 {
   "name": "petrifi",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Harden visible property.",
   "main": "petrifi.js",
+  "support": "petrifi.support.js",
+  "deploy": "petrifi.deploy.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel petrifi.js -o petrifi.support.js && webpack",
+    "test": "mocha petrifi-test.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +21,7 @@
   ],
   "author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
   "contributors": [
-      "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
+    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
   ],
   "license": "MIT",
   "bugs": {
@@ -26,7 +29,16 @@
   },
   "homepage": "https://github.com/volkovasystems/petrifi#readme",
   "dependencies": {
-    "protype": "^0.4.0",
-    "zelf": "^0.3.0"
+    "babel-runtime": "^6.20.0",
+    "protype": "^0.7.0",
+    "zelf": "^0.4.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.21.0",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-latest": "^6.16.0",
+    "source-map-loader": "^0.1.5",
+    "webpack": "^1.14.0"
   }
 }
