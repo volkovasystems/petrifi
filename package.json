@@ -1,12 +1,13 @@
 {
   "name": "petrifi",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Harden visible property.",
   "main": "petrifi.js",
   "support": "petrifi.support.js",
   "deploy": "petrifi.deploy.js",
+  "browser": "petrifi.deploy.js",
   "scripts": {
-    "build": "babel petrifi.js -o petrifi.support.js && webpack",
+    "build": "babel petrifi.js --out-file petrifi.support.js --source-maps && webpack --progress",
     "test": "mocha petrifi-test.js"
   },
   "repository": {
@@ -29,16 +30,16 @@
   },
   "homepage": "https://github.com/volkovasystems/petrifi#readme",
   "dependencies": {
-    "babel-runtime": "^6.20.0",
-    "protype": "^0.8.0",
-    "zelf": "^0.4.0"
+    "babel-runtime": "^6.23.0",
+    "protype": "^0.17.0",
+    "zelf": "^0.8.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.18.0",
-    "babel-core": "^6.21.0",
-    "babel-plugin-transform-runtime": "^6.15.0",
-    "babel-preset-latest": "^6.16.0",
-    "source-map-loader": "^0.1.5",
-    "webpack": "^1.14.0"
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-latest": "^6.22.0",
+    "source-map-loader": "^0.1.6",
+    "webpack": "^2.2.1"
   }
 }

@@ -1,10 +1,9 @@
 {
   "name": "petrifi",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Harden visible property.",
-  "main": "petrifi.js",
+  "main": "petrifi.deploy.js",
   "support": "petrifi.support.js",
-  "deploy": "petrifi.deploy.js",
   "authors": [
     "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
     "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
@@ -25,7 +24,7 @@
     "tests"
   ],
   "dependencies": {
-    "protype": "^0.8.0",
-    "zelf": "^0.4.0"
+    "protype": "^0.17.0",
+    "zelf": "^0.8.0"
   }
 }
