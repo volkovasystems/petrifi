@@ -14,4 +14,5 @@ webpack \
 bower install \
 protype \
 zelf \
---save
+--save \
+--force-latest
