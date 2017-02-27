@@ -56,12 +56,19 @@
                                                                                                                                                                                                                                                         
                                                                                                                                                                                                                                                         	@include:
                                                                                                                                                                                                                                                         		{
+                                                                                                                                                                                                                                                        			"falzy": "falzy",
+                                                                                                                                                                                                                                                        			"kein": "kein",
+                                                                                                                                                                                                                                                        			"protype": "protype",
+                                                                                                                                                                                                                                                        			"wichevr": "wichevr",
                                                                                                                                                                                                                                                         			"zelf": "zelf"
                                                                                                                                                                                                                                                         		}
                                                                                                                                                                                                                                                         	@end-include
                                                                                                                                                                                                                                                         */
 
+var falzy = require("falzy");
+var kein = require("kein");
 var protype = require("protype");
+var wichevr = require("wichevr");
 var zelf = require("zelf");
 
 var petrifi = function petrifi(property, value, entity) {
@@ -70,29 +77,34 @@ var petrifi = function petrifi(property, value, entity) {
                                                          		{
                                                          			"property:required": "string",
                                                          			"value:required": "*",
-                                                         			"entity:optional": "object"
+                                                         			"entity": "object"
                                                          		}
                                                          	@end-meta-configuration
                                                          */
 
-	if (!property || !protype(property, STRING)) {
+	if (falzy(property) || !protype(property, STRING)) {
 		throw new Error("invalid property");
 	}
 
 	var self = zelf(this);
 
-	entity = entity || self;
+	entity = wichevr(entity, self);
 
-	if (!protype(entity[property], UNDEFINED)) {
+	if (kein(entity, property)) {
 		return entity;
 	}
 
-	(0, _defineProperty2.default)(entity, property, {
-		"enumerable": true,
-		"configurable": false,
-		"writable": false,
-		"value": value });
+	try {
+		(0, _defineProperty2.default)(entity, property, {
+			"enumerable": true,
+			"configurable": false,
+			"writable": false,
+			"value": value });
 
+
+	} catch (error) {
+		throw new Error("cannot petrify " + property + ", " + error.stack);
+	}
 
 	return entity;
 };

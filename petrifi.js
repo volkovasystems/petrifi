@@ -56,12 +56,19 @@
 
 	@include:
 		{
+			"falzy": "falzy",
+			"kein": "kein",
+			"protype": "protype",
+			"wichevr": "wichevr",
 			"zelf": "zelf"
 		}
 	@end-include
 */
 
+const falzy = require( "falzy" );
+const kein = require( "kein" );
 const protype = require( "protype" );
+const wichevr = require( "wichevr" );
 const zelf = require( "zelf" );
 
 const petrifi = function petrifi( property, value, entity ){
@@ -70,29 +77,34 @@ const petrifi = function petrifi( property, value, entity ){
 			{
 				"property:required": "string",
 				"value:required": "*",
-				"entity:optional": "object"
+				"entity": "object"
 			}
 		@end-meta-configuration
 	*/
 
-	if( !property || !protype( property, STRING ) ){
+	if( falzy( property ) || !protype( property, STRING ) ){
 		throw new Error( "invalid property" );
 	}
 
 	let self = zelf( this );
 
-	entity = entity || self;
+	entity = wichevr( entity, self );
 
-	if( !protype( entity[ property ], UNDEFINED ) ){
+	if( kein( entity, property ) ){
 		return entity;
 	}
 
-	Object.defineProperty( entity, property, {
-		"enumerable": true,
-		"configurable": false,
-		"writable": false,
-		"value": value
-	} );
+	try{
+		Object.defineProperty( entity, property, {
+			"enumerable": true,
+			"configurable": false,
+			"writable": false,
+			"value": value
+		} );
+
+	}catch( error ){
+		throw new Error( `cannot petrify ${ property }, ${ error.stack }` );
+	}
 
 	return entity;
 };
