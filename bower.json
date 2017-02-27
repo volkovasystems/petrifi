@@ -1,6 +1,6 @@
 {
   "name": "petrifi",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Harden visible property.",
   "main": "petrifi.deploy.js",
   "support": "petrifi.support.js",

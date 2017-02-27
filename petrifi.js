@@ -82,7 +82,7 @@ const petrifi = function petrifi( property, value, entity ){
 		@end-meta-configuration
 	*/
 
-	if( falzy( property ) || !protype( property, STRING ) ){
+	if( falzy( property ) || !protype( property, NUMBER + STRING ) ){
 		throw new Error( "invalid property" );
 	}
 
