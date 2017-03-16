@@ -90,7 +90,7 @@ var petrifi = function petrifi(property, value, entity) {
 
 	entity = wichevr(entity, self);
 
-	if (kein(entity, property)) {
+	if (kein(property, entity)) {
 		return entity;
 	}
 
