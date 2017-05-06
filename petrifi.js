@@ -43,15 +43,9 @@
 	@end-module-configuration
 
 	@module-documentation:
-		Makes your property-value non-configurable and non-writable.
+		Harden visible property.
 
-		If entity is given, the property will be bound to the entity.
-
-		Else, if this module is used in the browser, the entity defaults to the @code:window;.
-
-		Else, if this module is used in a NodeJS environment, the entity defaults to @code:global;.
-
-		Note that if the entity is petrified, you cannot use @code:delete; on it.
+		Makes your property-value enumerable, non-configurable and non-writable.
 	@end-module-documentation
 
 	@include:
@@ -75,7 +69,10 @@ const petrifi = function petrifi( property, value, entity ){
 	/*;
 		@meta-configuration:
 			{
-				"property:required": "string",
+				"property:required": [
+					"number",
+					"string"
+				],
 				"value:required": "*",
 				"entity": "object"
 			}
@@ -86,9 +83,7 @@ const petrifi = function petrifi( property, value, entity ){
 		throw new Error( "invalid property" );
 	}
 
-	let self = zelf( this );
-
-	entity = wichevr( entity, self );
+	entity = wichevr( entity, zelf( this ) );
 
 	if( kein( property, entity ) ){
 		return entity;
@@ -96,10 +91,11 @@ const petrifi = function petrifi( property, value, entity ){
 
 	try{
 		Object.defineProperty( entity, property, {
-			"enumerable": true,
+			"value": value,
+
 			"configurable": false,
-			"writable": false,
-			"value": value
+			"enumerable": true,
+			"writable": false
 		} );
 
 	}catch( error ){
