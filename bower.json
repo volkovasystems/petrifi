@@ -1,12 +1,13 @@
 {
   "name": "petrifi",
-  "version": "0.15.0",
+  "version": "0.16.0",
   "description": "Harden visible property.",
   "main": "petrifi.deploy.js",
   "support": "petrifi.support.js",
   "authors": [
     "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
-    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
+    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+    "Vinse Vinalon <vinsevinalon@gmail.com>"
   ],
   "license": "MIT",
   "keywords": [
@@ -24,10 +25,10 @@
     "tests"
   ],
   "dependencies": {
-    "falzy": "^0.19.0",
-    "kein": "^0.25.0",
-    "protype": "^0.21.0",
-    "wichevr": "^0.9.0",
-    "zelf": "^0.11.0"
+    "falzy": "^0.20.0",
+    "kein": "^0.26.0",
+    "protype": "^0.22.0",
+    "wichevr": "^0.10.0",
+    "zelf": "^0.12.0"
   }
 }
