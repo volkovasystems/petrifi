@@ -1,8 +1,40 @@
+<!DOCTYPE html>
 <html>
 	<head>
-		<script
-			type="application/javascript"
-			src="./petrifi.deploy.js">
-		</script>
+		<title>petrifi unit test</title>
+
+		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+
+		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
+
+		<script type="application/javascript" src="./petrifi.deploy.js"></script>
 	</head>
+
+	<body>
+		<div id="qunit"></div>
+
+		<div id="qunit-fixture"></div>
+
+		<script type="application/javascript">
+			QUnit.test( "petrifi unit test", function( assert ) {
+
+				let test = { };
+				petrifi( "hello", "world", test );
+				let descriptor = Object.getOwnPropertyDescriptor( test, "hello" );
+
+				assert.equal( test.hello, "world", "should have value 'hello'" );
+
+				assert.equal( descriptor.configurable, false, "should be false" );
+
+				assert.equal( descriptor.enumerable, true, "should be true" );
+
+				assert.equal( descriptor.writable, false, "should be false" );
+
+				petrifi( "hello", "value", test );
+
+				assert.equal( test.hello, "world", "should have value 'hello'" );
+				
+			} );
+		</script>
+	</body>
 </html>
