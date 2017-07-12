@@ -1,6 +1,6 @@
 {
   "name": "petrifi",
-  "version": "0.16.0",
+  "version": "0.17.0",
   "description": "Harden visible property.",
   "main": "petrifi.deploy.js",
   "support": "petrifi.support.js",
@@ -26,9 +26,9 @@
   ],
   "dependencies": {
     "falzy": "^0.20.0",
-    "kein": "^0.26.0",
+    "kein": "^0.28.0",
     "protype": "^0.22.0",
-    "wichevr": "^0.10.0",
+    "wichevr": "^0.13.0",
     "zelf": "^0.12.0"
   }
 }

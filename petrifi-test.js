@@ -4,6 +4,7 @@ const petrifi = require( "./petrifi.js" );
 
 let test = { };
 petrifi( "hello", "world", test );
+
 let descriptor = Object.getOwnPropertyDescriptor( test, "hello" );
 
 assert.equal( test.hello, "world", "should have value 'hello'" );

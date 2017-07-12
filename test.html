@@ -20,6 +20,7 @@
 
 				let test = { };
 				petrifi( "hello", "world", test );
+
 				let descriptor = Object.getOwnPropertyDescriptor( test, "hello" );
 
 				assert.equal( test.hello, "world", "should have value 'hello'" );
@@ -33,7 +34,7 @@
 				petrifi( "hello", "value", test );
 
 				assert.equal( test.hello, "world", "should have value 'hello'" );
-				
+
 			} );
 		</script>
 	</body>
