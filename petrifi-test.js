@@ -11,7 +11,7 @@ assert.equal( test.hello, "world", "should be equal to 'hello'" );
 
 assert.equal( descriptor.configurable, false, "should be equal to false" );
 
-assert.equal( descriptor.enumerable, true, "should be true" );
+assert.equal( descriptor.enumerable, true, "should be equal to true" );
 
 assert.equal( descriptor.writable, false, "should be equal to false" );
 
