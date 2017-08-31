@@ -1,34 +1,27 @@
 {
-  "name": "petrifi",
-  "version": "0.18.0",
-  "description": "Harden visible property.",
-  "main": "petrifi.deploy.js",
-  "support": "petrifi.support.js",
-  "authors": [
-    "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
-    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-    "Vinse Vinalon <vinsevinalon@gmail.com>"
-  ],
-  "license": "MIT",
-  "keywords": [
-    "harden",
-    "visible",
-    "property",
-    "petrifi"
-  ],
-  "homepage": "https://github.com/volkovasystems/petrifi",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "falzy": "^0.23.0",
-    "kein": "^0.30.0",
-    "protype": "^0.24.0",
-    "wichevr": "^0.14.0",
-    "zelf": "^0.14.0"
-  }
+	"name": "petrifi",
+	"version": "0.18.0",
+	"description": "Harden visible property.",
+	"main": "petrifi.deploy.js",
+	"support": "petrifi.support.js",
+	"authors": [
+		"Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+		"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+		"Vinse Vinalon <vinsevinalon@gmail.com>"
+	],
+	"license": "MIT",
+	"keywords": [
+		"harden",
+		"visible",
+		"property",
+		"petrifi"
+	],
+	"homepage": "https://github.com/volkovasystems/petrifi",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	]
 }
