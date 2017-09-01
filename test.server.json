@@ -1,16 +1,74 @@
 {
-  "stats": {
-    "suites": 0,
-    "tests": 0,
-    "passes": 0,
-    "pending": 0,
-    "failures": 0,
-    "start": "2017-08-31T06:30:58.927Z",
-    "end": "2017-08-31T06:30:58.927Z",
-    "duration": 0
-  },
-  "tests": [],
-  "pending": [],
-  "failures": [],
-  "passes": []
+	"stats": {
+		"suites": 5,
+		"tests": 4,
+		"passes": 4,
+		"pending": 0,
+		"failures": 0,
+		"start": "2017-09-01T04:09:13.796Z",
+		"end": "2017-09-01T04:09:13.803Z",
+		"duration": 7
+	},
+	"tests": [
+		{
+			"title": "should contain hello property with value of 'world'",
+			"fullTitle": "petrifi `petrifi( 'hello', 'world', { } )` should contain hello property with value of 'world'",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to true",
+			"fullTitle": "petrifi `property-value enumerable` should be equal to true",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to false",
+			"fullTitle": "petrifi `property-value configurable` should be equal to false",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to false",
+			"fullTitle": "petrifi `property-value writable` should be equal to false",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		}
+	],
+	"pending": [],
+	"failures": [],
+	"passes": [
+		{
+			"title": "should contain hello property with value of 'world'",
+			"fullTitle": "petrifi `petrifi( 'hello', 'world', { } )` should contain hello property with value of 'world'",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to true",
+			"fullTitle": "petrifi `property-value enumerable` should be equal to true",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to false",
+			"fullTitle": "petrifi `property-value configurable` should be equal to false",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to false",
+			"fullTitle": "petrifi `property-value writable` should be equal to false",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		}
+	]
 }

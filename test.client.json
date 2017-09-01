@@ -1,0 +1,180 @@
+{
+	"state": {
+		"passed": 4,
+		"failed": 0,
+		"skipped": 0
+	},
+	"start": "2017-09-01T04:09:14.876Z",
+	"end": "2017-09-01T04:10:04.391Z",
+	"capabilities": {
+		"browserName": "chrome",
+		"chromeOptions": {
+			"args": [
+				"disable-gpu",
+				"headless"
+			]
+		},
+		"proxy": null
+	},
+	"host": "127.0.0.1",
+	"port": 4444,
+	"baseUrl": "http://localhost",
+	"framework": "mocha",
+	"mochaOpts": {
+		"timeout": 10000,
+		"ui": "bdd"
+	},
+	"suites": [
+		{
+			"name": "petrifi",
+			"duration": 0,
+			"start": "2017-09-01T04:10:03.972Z",
+			"tests": [],
+			"hooks": []
+		},
+		{
+			"name": "petrifi",
+			"duration": 243,
+			"start": "2017-09-01T04:10:03.972Z",
+			"end": "2017-09-01T04:10:04.215Z",
+			"tests": [],
+			"hooks": [
+				{
+					"start": "2017-09-01T04:10:03.974Z",
+					"end": "2017-09-01T04:10:03.974Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "petrifi",
+					"associatedTest": "should contain hello property with value of 'world'"
+				},
+				{
+					"start": "2017-09-01T04:10:04.082Z",
+					"end": "2017-09-01T04:10:04.082Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "petrifi",
+					"associatedTest": "should contain hello property with value of 'world'"
+				},
+				{
+					"start": "2017-09-01T04:10:04.083Z",
+					"end": "2017-09-01T04:10:04.083Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "petrifi",
+					"associatedTest": "should be equal to true"
+				},
+				{
+					"start": "2017-09-01T04:10:04.125Z",
+					"end": "2017-09-01T04:10:04.125Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "petrifi",
+					"associatedTest": "should be equal to true"
+				},
+				{
+					"start": "2017-09-01T04:10:04.126Z",
+					"end": "2017-09-01T04:10:04.126Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "petrifi",
+					"associatedTest": "should be equal to false"
+				},
+				{
+					"start": "2017-09-01T04:10:04.170Z",
+					"end": "2017-09-01T04:10:04.170Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "petrifi",
+					"associatedTest": "should be equal to false"
+				},
+				{
+					"start": "2017-09-01T04:10:04.171Z",
+					"end": "2017-09-01T04:10:04.171Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "petrifi",
+					"associatedTest": "should be equal to false"
+				},
+				{
+					"start": "2017-09-01T04:10:04.214Z",
+					"end": "2017-09-01T04:10:04.215Z",
+					"duration": 1,
+					"title": "\"after each\" hook",
+					"associatedSuite": "petrifi",
+					"associatedTest": "should be equal to false"
+				},
+				{
+					"start": "2017-09-01T04:10:04.215Z",
+					"end": "2017-09-01T04:10:04.215Z",
+					"duration": 0,
+					"title": "\"after all\" hook",
+					"associatedSuite": "petrifi"
+				}
+			]
+		},
+		{
+			"name": "`petrifi( 'hello', 'world', { } )`",
+			"duration": 110,
+			"start": "2017-09-01T04:10:03.973Z",
+			"end": "2017-09-01T04:10:04.083Z",
+			"tests": [
+				{
+					"name": "should contain hello property with value of 'world'",
+					"start": "2017-09-01T04:10:03.973Z",
+					"end": "2017-09-01T04:10:04.082Z",
+					"duration": 109,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`property-value enumerable`",
+			"duration": 42,
+			"start": "2017-09-01T04:10:04.083Z",
+			"end": "2017-09-01T04:10:04.125Z",
+			"tests": [
+				{
+					"name": "should be equal to true",
+					"start": "2017-09-01T04:10:04.083Z",
+					"end": "2017-09-01T04:10:04.125Z",
+					"duration": 42,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`property-value configurable`",
+			"duration": 44,
+			"start": "2017-09-01T04:10:04.126Z",
+			"end": "2017-09-01T04:10:04.170Z",
+			"tests": [
+				{
+					"name": "should be equal to false",
+					"start": "2017-09-01T04:10:04.126Z",
+					"end": "2017-09-01T04:10:04.170Z",
+					"duration": 44,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`property-value writable`",
+			"duration": 45,
+			"start": "2017-09-01T04:10:04.170Z",
+			"end": "2017-09-01T04:10:04.215Z",
+			"tests": [
+				{
+					"name": "should be equal to false",
+					"start": "2017-09-01T04:10:04.171Z",
+					"end": "2017-09-01T04:10:04.214Z",
+					"duration": 43,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		}
+	]
+}

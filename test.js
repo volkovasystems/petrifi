@@ -66,6 +66,53 @@ const petrifi = require( "./petrifi.js" );
 
 describe( "petrifi", ( ) => {
 
+	describe( "`petrifi( 'hello', 'world', { } )`", ( ) => {
+		it( "should contain hello property with value of 'world'", ( ) => {
+
+			let test = { };
+			petrifi( "hello", "world", test );
+
+			assert.equal( test.hello, "world" );
+
+		} );
+	} );
+
+	describe( "`property-value enumerable`", ( ) => {
+		it( "should be equal to true", ( ) => {
+
+			let test = { };
+			petrifi( "hello", "world", test );
+
+			let descriptor = Object.getOwnPropertyDescriptor( test, "hello" );
+			assert.equal( descriptor.enumerable, true );
+
+		} );
+	} );
+
+	describe( "`property-value configurable`", ( ) => {
+		it( "should be equal to false", ( ) => {
+
+			let test = { };
+			petrifi( "hello", "world", test );
+
+			let descriptor = Object.getOwnPropertyDescriptor( test, "hello" );
+			assert.equal( descriptor.configurable, false );
+
+		} );
+	} );
+
+	describe( "`property-value writable`", ( ) => {
+		it( "should be equal to false", ( ) => {
+
+			let test = { };
+			petrifi( "hello", "world", test );
+
+			let descriptor = Object.getOwnPropertyDescriptor( test, "hello" );
+			assert.equal( descriptor.writable, false );
+
+		} );
+	} );
+
 } );
 
 //: @end-server
